@@ -1,6 +1,6 @@
 {
   "name": "rematch-logic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use redux-logic in rematch models",
   "source": "src",
   "main": "dist/feathers-rematch.cjs.js",
