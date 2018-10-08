@@ -1,6 +1,4 @@
-'use strict';
-
-var reduxLogic = require('redux-logic');
+import { createLogic } from 'redux-logic';
 
 let localStore;
 let arrLogics = [];
@@ -18,7 +16,7 @@ const plugin = (logicMiddleware) => ({
       if (logic.process) {
         logic.process = decorateProcess(logic.process);
       }
-      arrLogics.push(reduxLogic.createLogic(logic));
+      arrLogics.push(createLogic(logic));
     });
   },
 
@@ -28,4 +26,4 @@ const plugin = (logicMiddleware) => ({
   }
 });
 
-module.exports = plugin;
+export default plugin;

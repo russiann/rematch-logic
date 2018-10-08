@@ -1,11 +1,19 @@
 {
   "name": "rematch-logic",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Use redux-logic in rematch models",
-  "main": "index.js",
+  "source": "src",
+  "main": "dist/feathers-rematch.cjs.js",
+  "module": "dist/feathers-rematch.esm.js",
+  "browser": "dist/feathers-rematch.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "pretest": "npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/russiann/rematch-logic.git"
@@ -20,5 +28,13 @@
   "bugs": {
     "url": "https://github.com/russiann/rematch-logic/issues"
   },
-  "homepage": "https://github.com/russiann/rematch-logic#readme"
+  "homepage": "https://github.com/russiann/rematch-logic#readme",
+  "dependencies": {
+    "redux-logic": "^2.0.1"
+  },
+  "devDependencies": {
+    "rollup": "^0.63.4",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  }
 }
